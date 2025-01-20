@@ -46,7 +46,7 @@ Git commands
 . Delete a branch : git branch -d <branch-name>
 
 . pull new updates and commits from remote branch : git fetch origin/master
-. 
+. git pull performs git fetch followed by git merge where as git fetch does not effect the local repo 
 
 
 .check commit history : git log
