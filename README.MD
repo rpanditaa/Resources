@@ -1,7 +1,7 @@
 
-GIT 
+## GIT 
 
-- git ignore for macos
+### gitignore for macos
 
         # General
         .DS_Store
@@ -31,28 +31,28 @@ GIT
         Temporary Items
         .apdisk
 
-Git commands
+### Git commands
 
-. create project : git init
-. clone repo : git clone <repo-url>
-. check status : git status
-. add files to staging area : git add <file-name> OR git add .
-. check changes between current dir and staging area : git diff
-. create a commit : git commit -m 'your-message'
+        create project : git init
+        clone repo : git clone <repo-url>
+        check status : git status
+        add files to staging area : git add <file-name> OR git add .
+        check changes between current dir and staging area : git diff
+        create a commit : git commit -m 'your-message'
 
-. check all branches : git branch
-. create a new branch : git branch <new-branch-name>
-. point to a new branch : git checkout <branch-name>
-. Delete a branch : git branch -d <branch-name>
+        check all branches : git branch
+        create a new branch : git branch <new-branch-name>
+        point to a new branch : git checkout <branch-name>
+        Delete a branch : git branch -d <branch-name>
 
-. pull new updates and commits from remote branch : git fetch origin/master
-. git pull performs git fetch followed by git merge where as git fetch does not effect the local repo 
-
-
-.check commit history : git log
+        pull new updates and commits from remote branch : git fetch origin/master
+        git pull performs git fetch followed by git merge where as git fetch does not effect the local repo 
 
 
-Run quarkus
+        check commit history : git log
+
+
+## Run quarkus with quarkus cli 
 
 - install quarkus :
 
@@ -75,3 +75,31 @@ Run quarkus
 
         src/main/java/org/acme/GreetingResource.java
 
+
+## install Maven 
+
+- refer to this link 
+        
+        https://www.youtube.com/watch?v=2-bt_vGkUiQ
+
+## Run quarkus with maven 
+
+- create starter project :
+
+        mvn io.quarkus:quarkus-maven-plugin:1.13.3.Final:create \
+        -DprojectGroupId=com.example \
+        -DprojectArtifactId=quarkus-api \
+        -DclassName="com.example.HelloResource" \
+        -Dpath="/hello"
+
+- change dir :
+
+        cd <folder-name>
+
+- run maven :
+
+        ./mvnw compile quarkus:dev
+
+- quarkus project will be running on :
+
+        localhost:8080
